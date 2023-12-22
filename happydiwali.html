@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <link
+        rel="icon0"
+        type="image/png"
+        href="https://tse1.mm.bing.net/th?id=OIP.Zi-IlP8kS1lBzN5KkBuDJgHaFj&pid=Api&P=0&h=180"/>
+        <style>
+           body{
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+           }
+           .bg{
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            background-image:url("https://tse4.mm.bing.net/th?id=OIP.b0VGsQqJYCiq_KyaELOWawHaEL&pid=Api&P=0&h=180");
+            background-repeat: no-repeat;
+            background-position: 50% 10%;
+           }
+           .greeting{
+            position: absolute;
+            bottom: 100px;
+            width: 100%;
+            height: 70px;
+           }
+           .wishes{
+            font-size: 50px;
+            font-family: Arial,black;
+            color: white;
+            -webkit-text-stroke: 2px orangered;
+            text-shadow: 0px 0px 10px yellow;
+           }
+           </style>
+           <title>HAPPY DIWALI ALL OF YOU</title>
+    </head>
+    <body>
+        <div class="bg">
+            <div class="greeting">
+                <marquee scrollamount="20">
+                <span class="wishes" id="wish"></span>
+                </marquee>
+            </div>
+        </div>
+        <script>
+            let name = ( prompt("Enter your good name: ")).toUpperCase();
+            let spn = document.getElementById("wish");
+            let text = `HAPPY DIWALI RUTUJA FROM PRAJAKTA`;
+            spn.innerHTML=text;
+            let speech = new SpeechSynthesisUtterance();
+            speech.text=text;
+            speechSynthesis.speak(speech);
+            </script>
+    </body>
+</html>
+
+        
